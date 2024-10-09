@@ -1,7 +1,7 @@
 import Review from "../models/reviewModel.mjs";
 
 //Get All Reviews
-export async function getAllReviews(req, res) {
+const getAllReviews= async(req, res) =>{
   try {
     const reviews = await Review.find();
     res.status(200).json(reviews);
@@ -12,7 +12,7 @@ export async function getAllReviews(req, res) {
 
 // Get Review by ID
 
-export async function getReviewById(req, res) {
+const getReviewById = async(req, res) =>{
   try {
     const review = await Review.findById(req.params.id);
     if (!review) return res.status(404).json({ message: "Review not found" });
@@ -24,7 +24,7 @@ export async function getReviewById(req, res) {
 
 // Add Review
 
-export async function addReview(req, res) {
+const addReview = async(req, res) =>{
   const review = new Review(req.body);
   try {
     const savedReview = await review.save();
@@ -36,7 +36,7 @@ export async function addReview(req, res) {
 
 // Update Review
 
-export async function updateReview(req, res) {
+const updateReview = async(req, res) =>{
   try {
     const updatedReview = await Review.findByIdAndUpdate(
       req.params.id,
@@ -53,7 +53,7 @@ export async function updateReview(req, res) {
 
 // Delete Review
 
-export async function deleteReview(req, res) {
+const deleteReview = async(req, res) =>{
   try {
     const deletedReview = await Review.findByIdAndDelete(req.params.id);
     if (!deletedReview)
@@ -63,3 +63,4 @@ export async function deleteReview(req, res) {
     res.status(500).json({ message: "Failed to delete review", error });
   }
 }
+export {deleteReview, updateReview,addReview,getReviewById ,getAllReviews}
