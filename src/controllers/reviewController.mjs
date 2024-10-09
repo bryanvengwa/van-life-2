@@ -1,4 +1,4 @@
-import Booking from "../models/reviewModel.mjs";
+import Review from "../models/reviewModel.mjs";
 
 //Get All Reviews
 export async function getAllReviews(req, res) {
