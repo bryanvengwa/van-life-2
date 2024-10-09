@@ -1,19 +1,15 @@
-import express from "express";
-import { getAllVans } from "../controllers/vanController.mjs";
-import { createVan } from "../controllers/vanController.mjs";
-import { updateVan } from "../controllers/vanController.mjs";
-import { deleteVan } from "../controllers/vanController.mjs";
-import { getVanById } from "../controllers/vanController.mjs";
+import { createVan, deleteVan, getAllVans, getVanById, updateVan } from "../controllers/vanController.mjs";
 
+import express from "express"
 
 const router = express.Router();
 
 
-router.get("/vans", getAllVans);
+router.get("/", getAllVans);
 router.get("/vans/:id", getVanById);
-router.post("/vans", createVan);
+router.post("/create", createVan);
 router.put("/vans/:id", updateVan);
-router.delete("/vans/:id", deleteVan);
+router.delete("/:id", deleteVan);
 
 
 export default router;
