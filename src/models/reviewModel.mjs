@@ -18,8 +18,3 @@ const reviewSchema = new mongoose.Schema({
 const Review = mongoose.model("Review",reviewSchema)
 
 export default Review;
-
-
-// const Review = mongoose.model("Review", reviewSchema); // Ensure this line is correct
-
-// export default Review;
