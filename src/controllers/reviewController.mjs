@@ -63,15 +63,3 @@ export async function deleteReview(req, res) {
     res.status(500).json({ message: "Failed to delete review", error });
   }
 }
-
-// Define Routes
-import express from "express";
-const router = express.Router();
-
-router.get("/", getAllReviews);
-router.get("/:id", getReviewById);
-router.post("/", addReview);
-router.put("/:id", updateReview);
-router.delete("/:id", deleteReview);
-
-export default router
