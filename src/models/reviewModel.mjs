@@ -6,8 +6,6 @@ const reviewSchema = new mongoose.Schema({
   comment: String,
   userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
   vanId: { type: mongoose.Schema.Types.ObjectId, ref: 'Van', required: true },
-  hostId: { type: mongoose.Schema.Types.ObjectId, ref: 'Host', required: true },
-  bookingId: { type: mongoose.Schema.Types.ObjectId, ref: 'Booking', required: true },
   createdAt: { type:
     Date,
     default: Date.now,
