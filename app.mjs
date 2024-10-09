@@ -6,6 +6,7 @@ import cors from 'cors';
 import Users from "./src/routes/userRoute.mjs"
 import Reviews from "./src/routes/reviewRoutes.mjs"
 import Van from "./src/routes/vanRoutes.mjs"
+import host from './src/routes/hostRoutes.mjs';
 
 const app = express();
 app.use(bodyParser.json());
@@ -19,6 +20,7 @@ app.use('/api' , bookingRoutes)
 app.use('/api/users' , Users)
 app.use('/api/reviews', Reviews)
 app.use('/api/vans', Van)
+app.use('/api/host',host)
 
 
 // Error handling middleware
