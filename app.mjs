@@ -2,10 +2,12 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import connectToDatabase from './src/config/dbConfig.mjs';
 import bookingRoutes from './src/routes/bookingRoutes.mjs';
+import cors from 'cors';
 
 
 const app = express();
 app.use(bodyParser.json());
+app.use(cors());
 
 
 // mount routes here 
@@ -13,7 +15,11 @@ app.use(bodyParser.json());
 app.use('/api' , bookingRoutes)
 
 
-
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
 
 
 app.listen(process.env.PORT || 3001, () => {
