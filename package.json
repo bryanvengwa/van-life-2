@@ -8,6 +8,7 @@
     "nodemon": "^3.1.7"
   },
   "scripts": {
-    "start": "nodemon app.mjs" 
+    "start": "nodemon app.mjs" ,
+    "dev": "nodemon app.mjs"
   }
 }
