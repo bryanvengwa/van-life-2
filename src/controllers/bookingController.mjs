@@ -10,7 +10,6 @@ export async function getAllBookings(req , res){
   }
 }
 
-
 // Get a single booking by ID
 export async function getBookingById (req, res) {
     try {
