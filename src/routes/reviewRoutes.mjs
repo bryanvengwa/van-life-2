@@ -3,10 +3,10 @@ import * as ReviewController from "../controllers/reviewController.mjs";
 
 const router = express.Router();
 
-router.get("/reviews", getAllReviews);
-router.get("/reviews/:id", getReviewById);
-router.post("/reviews", addReview);
-router.put("/reviews/:id", updateReview);
-router.delete("/reviews/:id", deleteReview);
+router.get("/", getAllReviews);
+router.get("/:id", getReviewById);
+router.post("/", addReview);
+router.put("/:id", updateReview);
+router.delete("/:id", deleteReview);
 
 export default router;
