@@ -11,6 +11,9 @@
   },
   "scripts": {
     "start": "nodemon app.mjs",
-    "dev": "nodemon app.mjs"
+    "dev": "nodemon app.mjs",
+    "run dev": "nodemon app.mjs",
+    "run dev vercel-build": "nodemon app.mjs"
+
   }
 }
