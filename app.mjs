@@ -6,7 +6,8 @@ import cors from 'cors';
 import Users from "./src/routes/userRoute.mjs"
 import Reviews from "./src/routes/reviewRoutes.mjs"
 import Payment from './src/models/PaymentModel.mjs';
-import Host from './src/routes/hostRoutes.mjs'
+import Van from "./src/routes/vanRoutes.mjs"
+import Host from "./src/routes/hostRoutes.mjs"
 
 const app = express();
 app.use(bodyParser.json());
