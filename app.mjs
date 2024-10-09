@@ -9,7 +9,7 @@ import Reviews from "./src/routes/reviewRoutes.mjs"
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
-app.use(express.urlencoded({extended:true}))
+app.use(express.urlencoded({extended:false}))
 
 
 // mount routes here 
