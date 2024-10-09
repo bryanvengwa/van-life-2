@@ -18,6 +18,7 @@ app.use(express.urlencoded({extended:false}))
 app.use('/api' , bookingRoutes)
 app.use('/api/users' , Users)
 app.use('/api/reviews', Reviews)
+app.use('/api/vans', Van)
 
 
 // Error handling middleware
