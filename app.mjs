@@ -7,12 +7,10 @@ import Users from "./src/routes/userRoute.mjs"
 import Reviews from "./src/routes/reviewRoutes.mjs"
 import Payment from './src/models/PaymentModel.mjs';
 
-
-
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
-app.use(express.urlencoded({extended:true}))
+app.use(express.urlencoded({extended:false}))
 
 
 // mount routes here 
