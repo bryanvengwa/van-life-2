@@ -21,7 +21,9 @@ app.use((err, req, res, next) => {
   res.status(500).send('Something broke!');
 });
 
-
+app.use((req, res) => {
+  res.status(404).send('<h1>404! Page Not Found</h1>');
+});
 app.listen(process.env.PORT || 3001, () => {
     connectToDatabase();
     console.log(`Server is running on port ${process.env.PORT || 3001}`);
