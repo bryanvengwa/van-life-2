@@ -15,6 +15,5 @@
     "build": "nodemon app.mjs",
     "dev vercel-build": "nodemon app.mjs",
     "vercel-build": "nodemon app.mjs"
-
   }
 }

@@ -1,6 +1,6 @@
-import Booking from "../models/reviewModel.mjs";
+import Review from "../models/reviewModel.mjs";
 
-//Get All Reviews
+Get All Reviews
 export async function getAllReviews(req, res){
     try {
         const reviews = await Review.find();
@@ -57,3 +57,4 @@ export async function deleteReview(req, res){
         res.status(500).json({message: 'Failed to delete review', error})
     }
 }
+
