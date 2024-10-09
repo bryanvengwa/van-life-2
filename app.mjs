@@ -3,11 +3,13 @@ import bodyParser from 'body-parser';
 import connectToDatabase from './src/config/dbConfig.mjs';
 import bookingRoutes from './src/routes/bookingRoutes.mjs';
 import cors from 'cors';
+import Users from "./src/routes/userRoute.mjs"
 
 
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
+app.use(express.urlencoded({extended:true}))
 
 
 // mount routes here 
