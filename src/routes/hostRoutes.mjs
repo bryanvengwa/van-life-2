@@ -4,7 +4,7 @@ import {getAllHosts, getHostById, addHost, updateHost, deleteHost} from "./../co
 const router = express.Router();
 
 // Get all hosts
-router.get("/", HostController);
+router.get("/", getAllHosts);
 
 // Get a specific host by ID
 router.get("/:id", getHostById);

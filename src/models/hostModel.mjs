@@ -9,4 +9,4 @@ const hostSchema = new mongoose.Schema({
 
 });
 
-export default mongoose.model("Host", hostSchema);
+export default mongoose.model("Host", hostSchema);      
