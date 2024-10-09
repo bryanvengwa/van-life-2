@@ -4,7 +4,7 @@ import connectToDatabase from './src/config/dbConfig.mjs';
 import bookingRoutes from './src/routes/bookingRoutes.mjs';
 import cors from 'cors';
 import Users from "./src/routes/userRoute.mjs"
-
+import Reviews from "./src/routes/reviewRoutes.mjs"
 
 const app = express();
 app.use(bodyParser.json());
@@ -16,6 +16,7 @@ app.use(express.urlencoded({extended:true}))
 
 app.use('/api' , bookingRoutes)
 app.use('/api/users' , Users)
+app.use('/api/reviews', Reviews)
 
 
 // Error handling middleware
