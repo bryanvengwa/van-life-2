@@ -1,3 +1,4 @@
+import express from "express";
 import { getAllVans } from "../controllers/vanController.mjs";
 import { createVan } from "../controllers/vanController.mjs";
 import { updateVan } from "../controllers/vanController.mjs";
