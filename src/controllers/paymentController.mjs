@@ -1,4 +1,4 @@
-import Payment from '../models/PaymentModel.mjs'; // Import the payment model
+import Payment from '../models/paymentModel.mjs'; 
 
 // Get all payments
 export const getAllPayments = async (req, res) => {
