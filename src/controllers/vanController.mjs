@@ -1,6 +1,18 @@
 
 import Van from "../models/vanModel.mjs";
 
+export async function createVan(req, res) {
+  try {
+    const newVan = new Van(req.body);
+    await newVan.save();
+    res.status(201).json(newVan);
+  } catch (error) {
+  
+    res
+      .status(400)
+      .json({ message: "Failed to create van", error: error.message });
+  }
+}
 
 export async function getAllVans(req, res) {
   try {
@@ -23,18 +35,6 @@ export async function getVanById(req, res) {
   }
 }
 
-export async function createVan(req, res) {
-  try {
-    const newVan = new Van(req.body);
-    await newVan.save();
-    res.status(201).json(newVan);
-  } catch (error) {
-  
-    res
-      .status(400)
-      .json({ message: "Failed to create van", error: error.message });
-  }
-}
 export async function updateVan(req, res) {
   try {
     const updatedVan = await Van.findByIdAndUpdate(req.params.id, req.body, {
