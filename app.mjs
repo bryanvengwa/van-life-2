@@ -4,13 +4,15 @@ import connectToDatabase from './src/config/dbConfig.mjs';
 import bookingRoutes from './src/routes/bookingRoutes.mjs';
 
 
+
 const app = express();
 app.use(bodyParser.json());
 
 
 // mount routes here 
 
-app.use('/api' , bookingRoutes)
+app.use('/api' , bookingRoutes,)
+
 
 
 

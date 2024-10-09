@@ -1,6 +1,8 @@
 import express from "express";
 import * as BookingController from '../controllers/bookingController.mjs'
 
+
+
 const router = express.Router();
 
 router.get('/bookings', BookingController.getAllBookings);
