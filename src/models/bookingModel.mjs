@@ -8,6 +8,7 @@ const bookingSchema = new mongoose.Schema({
   endDate: { type: Date, required: true },
   pendingApproval: { type: Boolean, default: true },
   isApproved: { type: Boolean, default: false },
+
 });
 
 const Booking = mongoose.model('Booking', bookingSchema);
