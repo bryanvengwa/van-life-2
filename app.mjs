@@ -5,9 +5,7 @@ import bookingRoutes from './src/routes/bookingRoutes.mjs';
 import cors from 'cors';
 import Users from "./src/routes/userRoute.mjs"
 import Reviews from "./src/routes/reviewRoutes.mjs"
-import Payment from './src/models/PaymentModel.mjs';
-import Van from "./src/routes/vanRoutes.mjs"
-import Host from "./src/routes/hostRoutes.mjs"
+import paymentRoutes from "./src/routes/paymentRoutes.mjs"
 
 const app = express();
 app.use(bodyParser.json());
@@ -20,9 +18,7 @@ app.use(express.urlencoded({extended:false}))
 app.use('/api' , bookingRoutes)
 app.use('/api/users' , Users)
 app.use('/api/reviews', Reviews)
-app.use('/api/vans', Van)
-app.use('/api/payment', Payment)
-app.use('/api/host', Host)
+app.use('/api/payments', paymentRoutes)
 
 
 // Error handling middleware
