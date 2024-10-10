@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 import express from 'express';
 import bodyParser from 'body-parser';
 import connectToDatabase from './src/config/dbConfig.mjs';
@@ -37,4 +36,4 @@ app.listen(process.env.PORT || 3001, () => {
   });
   
 export default app;
->>>>>>> 49ed5f40af522086a917186a9254a27f3de59239
+
