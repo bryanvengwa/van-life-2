@@ -14,7 +14,6 @@ app.use(express.urlencoded({extended:false}))
 
 
 // mount routes here 
-
 app.use('/api' , bookingRoutes)
 app.use('/api/users' , Users)
 app.use('/api/reviews', Reviews)
