@@ -12,7 +12,7 @@
   "scripts": {
     "start": "nodemon app.mjs",
     "dev": "nodemon app.mjs",
-    "build": "nodemon app.mjs",
+    "build": "echo 'Build successful!'",
     "dev vercel-build": "nodemon app.mjs",
     "vercel-build": "nodemon app.mjs"
   }
