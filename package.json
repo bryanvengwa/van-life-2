@@ -10,7 +10,7 @@
     "nodemon": "^3.1.7"
   },
   "scripts": {
-    "start": "node app.mjs",              
+    "start": "node app.mjs",               
     "dev": "nodemon app.mjs",              
     "build": "echo 'Build successful!'",   
     "vercel-build": "npm run build"        
